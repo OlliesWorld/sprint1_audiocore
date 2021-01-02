@@ -9,7 +9,7 @@ const pageStyles = {
     padding: '15px 35px',
   }
 
-const locationPage = ({data}) => {
+const locationsPage = ({data}) => {
     return(
         <>
         <Nav />
@@ -42,4 +42,4 @@ const locationPage = ({data}) => {
 // `
 
 
-export default locationPage
+export default locationsPage
