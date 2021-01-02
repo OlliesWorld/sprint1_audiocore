@@ -1,5 +1,6 @@
 import * as React from "react"
 
+
 // styles
 const pageStyles = {
   color: "#232129",
@@ -99,6 +100,7 @@ const links = [
 // markup
 const IndexPage = () => {
   return (
+   
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1 style={headingStyles}>
