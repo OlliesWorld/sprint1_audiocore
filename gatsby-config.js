@@ -6,8 +6,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "YSfdAGFfumzzLdht9F6h8Jo6o1ka72iE3P0YnrBLo1Q",
-        spaceId: "azn8blgwc2y2",
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
     "gatsby-plugin-sharp",
