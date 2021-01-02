@@ -1,35 +1,48 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
+import Headphones from '../images/headphones.png'
 
 const navStyles = {
-  backgroundColor: '#f3df4d',
+  backgroundColor: '#96999b',
   width: '100%',
-  margin: '10 auto',
-  padding: '5px 15px',
+  margin: '0',
+  padding: '5px 0px',
+  display: 'flex',
 }
-const listStyles = {
-  marginBottom: 56,
-  paddingLeft: 80,
-  backgroundColor: '#f3df4d',
+const titleStyles = {
+  fontSize: 65,
+  color: '#f3df4d',
+  paddingLeft: 10,
+  margin: 0,
 }
 
+const listStyles = {
+  marginBottom: 5,
+  marginTop: 0,
+  paddingLeft: 380,
+
+}
 
 const linkStyle = {
-  color: '#96999b',
+  color: '#f3df4d',
   fontWeight: "bold",
-  fontSize: "16px",
   verticalAlign: "5%",
-  paddingLeft: 50,
-  fontSize: 50,
+  paddingLeft: 40,
+  fontSize: 40,
 }
-
+const headStyles = {
+  color: '#f3df4d',
+  width: 50,
+  height: 50,
+  paddingLeft: 25,
+}
 const Header = ({ siteTitle }) => (
   <header>
-    
-      <title>{siteTitle}</title>
-      <nav style={navStyles}>
-        <ul style={listStyles}>
+     <nav style={navStyles}>
+      <h1 style={titleStyles}>{siteTitle}</h1>
+      <img src={Headphones} alt="GoodWare Headphones" style={headStyles} />
+        <div style={listStyles}>
       <Link to='/' style={linkStyle}>
       Home
       </Link>
@@ -39,7 +52,9 @@ const Header = ({ siteTitle }) => (
       <Link to='/locations' style={linkStyle}>
       Locations
       </Link>
-      </ul>
+      
+      </div>
+      <img src={Headphones} alt="GoodWare Headphones" style={headStyles} />
       </nav>
 
     

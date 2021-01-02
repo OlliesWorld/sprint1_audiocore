@@ -2,7 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: "Sprint1_AudioCore",
+    title: "AudioCORE",
+    siteURL: "",
+    siteRepo: "https://github.com/OlliesWorld/sprint1_audiocore"
   },
   plugins: [
     {

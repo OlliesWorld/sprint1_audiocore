@@ -3,14 +3,14 @@ import Nav from '../components/nav'
 
 
 const containerStyles = {
-    backgroundColor: '#96999b',
-    width: '50%',
+    backgroundColor: '#f3df4d',
+    width: '80%',
     margin: '50px auto',
-    padding: '5px 15px',
+    padding: '15px 35px',
   }
 
   const textStyles = {
-   color: '#f3df4d',
+   color: '#96999b',
    fontSize: '2rem'
   }
 
