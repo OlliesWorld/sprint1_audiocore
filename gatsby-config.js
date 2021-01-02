@@ -1,10 +1,13 @@
-require('dotenv').config()
+const path = require(`path`)
+require("dotenv").config({
+  path: `.env`,
+})
 
 module.exports = {
   siteMetadata: {
     title: "AudioCORE",
-   
-    siteRepo: "https://github.com/OlliesWorld/sprint1_audiocore"
+    siteUrl: "https://build.com",
+    siteRepo: "https://github.com/OlliesWorld/sprint1_audiocore",
   },
   plugins: [
     {
