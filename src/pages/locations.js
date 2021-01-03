@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Nav from '../components/nav'
-// import {Link, graphql} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 
 const pageStyles = {
     backgroundColor: '#f3df4d',
@@ -15,31 +15,31 @@ const locationsPage = ({data}) => {
         <Nav />
         <main style={pageStyles}>
             <h1>Locations:</h1>
-            {/* <ul>
+            <ul>
                 {data.allContentfulLocations.nodes.map((Locations) => {
                     return (
                         <li id={location.id}>
-                            <Link to={`/locations/${location.slug}`}>{location.name}</Link>
+                            <Link to={`/locations/${location.id}`}>{location.id}</Link>
                         </li>
                     )
                 })}
-            </ul> */}
+            </ul>
         </main>
         </>
     )
 }
 
-// export const query = graphql `
-//     query LocationsPagesQuery {
-//         allContentfulLocations {
-//             nodes {
-//                 name
-//                 slug
-//                 id
-//             }
-//         }
-//     }
-// `
+export const query = graphql `
+    query LocationsPagesQuery {
+        allContentfulLocations {
+            nodes {
+                name
+                slug
+                id
+            }
+        }
+    }
+`
 
 
 export default locationsPage
