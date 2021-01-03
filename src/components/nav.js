@@ -13,14 +13,14 @@ const navStyles = {
 const titleStyles = {
   fontSize: 65,
   color: '#f3df4d',
-  paddingLeft: 10,
+  paddingLeft: 15,
   margin: 0,
 }
 
 const listStyles = {
   marginBottom: 5,
-  marginTop: 0,
-  paddingLeft: 380,
+  marginTop: 10,
+  paddingLeft: 400,
 
 }
 
@@ -29,12 +29,11 @@ const linkStyle = {
   fontWeight: "bold",
   verticalAlign: "5%",
   paddingLeft: 40,
-  fontSize: 40,
+  fontSize: 30,
 }
 const headStyles = {
-  color: '#f3df4d',
-  width: 50,
-  height: 50,
+  width: 70,
+  height: 70,
   paddingLeft: 25,
 }
 const Header = ({ siteTitle }) => (

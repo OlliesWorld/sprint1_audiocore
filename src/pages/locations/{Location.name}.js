@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Nav from '../components/nav'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 const pageStyles = {
     backgroundColor: '#f3df4d',
@@ -9,30 +9,27 @@ const pageStyles = {
     padding: '15px 35px',
   }
 
+ const cityStyles = {
+   color: '#000',
+ }
 const locationPage = ({data}) => {
-    return(
-        <>
-        <Nav />
-        <main style={pageStyles}>
-            <h1>{data.contentfulLocations.name}</h1>
-            <p>We are here for the taking!</p>
-                
-           
-        </main>
-        </>
-    )
+  return(
+      <>
+      <Nav />
+      <div style={pageStyles}>
+           <h2 style={cityStyles}>{data.contentfulLocations.name}</h2>
+           </div>        
+      </>
+  )
 }
 
-export const query = graphql`
-  query($id: String) {
+export const query = graphql `
+  query($id: String!) {
     contentfulLocations(id: { eq: $id }) {
-      slug
-      id
-      name
-    }
+              name
+      }
   }
 `
-
 
 
 export default locationPage

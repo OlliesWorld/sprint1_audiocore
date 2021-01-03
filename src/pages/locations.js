@@ -3,10 +3,24 @@ import Nav from '../components/nav'
 import {Link, graphql} from 'gatsby'
 
 const pageStyles = {
-    backgroundColor: '#f3df4d',
+    backgroundColor: '#fff',
     width: '80%',
     margin: '50px auto',
     padding: '15px 35px',
+  }
+
+  const linkStyles = {
+    display: 'inline-block',
+    textTransform: 'uppercase',
+    listStyleType: 'none',
+  }
+
+  const locationStyles = {
+    color: '#f3df4d',
+    textDecorationColor: '#96999b',
+    fontSize: 40,
+    padding: 40,
+
   }
 
 const locationsPage = ({data}) => {
@@ -18,8 +32,8 @@ const locationsPage = ({data}) => {
             <ul>
                 {data.allContentfulLocations.nodes.map((location) => {
                     return (
-                        <li id={location.id}>
-                            <Link to={`/locations/${location.slug}`}>{location.name}</Link>
+                        <li style={linkStyles} id={location.id}>
+                            <Link style={locationStyles} to={`/locations/${location.slug}`}>{location.name}</Link>
                         </li>
                     )
                 })}
