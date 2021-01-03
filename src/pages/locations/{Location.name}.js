@@ -14,7 +14,7 @@ const locationPage = ({data}) => {
         <>
         <Nav />
         <main style={pageStyles}>
-            <h1>{data.contentfulLocation.name}</h1>
+            <h1>{data.contentfulLocations.name}</h1>
             <p>We are here for the taking!</p>
                 
            
@@ -25,7 +25,7 @@ const locationPage = ({data}) => {
 
 export const query = graphql`
   query($id: String) {
-    contentfulLocation(id: { eq: $id }) {
+    contentfulLocations(id: { eq: $id }) {
       slug
       id
       name
