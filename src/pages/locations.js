@@ -16,10 +16,10 @@ const locationsPage = ({data}) => {
         <main style={pageStyles}>
             <h1>Locations:</h1>
             <ul>
-                {data.allContentfulLocations.nodes.map((Locations) => {
+                {data.allContentfulLocations.nodes.map((location) => {
                     return (
                         <li id={location.id}>
-                            <Link to={`/locations/${location.id}`}>{location.id}</Link>
+                            <Link to={`/locations/${location.slug}`}>{location.name}</Link>
                         </li>
                     )
                 })}
@@ -32,7 +32,7 @@ const locationsPage = ({data}) => {
 export const query = graphql `
     query LocationsPagesQuery {
         allContentfulLocations {
-            nodes {
+            nodes{
                 name
                 slug
                 id
