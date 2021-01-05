@@ -38,7 +38,9 @@ const IndexPage = () => {
           🎉🎉🎉
         </span>
         <br />
-        <span style={headingAccentStyles}>— you found the world's leading (and only)<br></br> <span role="img" aria-label="Headphone emojis">🎧</span> HEADPHONE <headphone role="img" aria-label="Headphone emojis">🎧</headphone> <br></br>sharing app</span>
+        <span style={headingAccentStyles}>— you found the world's leading (and only)
+        <br></br> 
+        <span role="img" aria-label="Headphone emojis">🎧</span> HEADPHONE <headphone role="img" aria-label="Headphone emojis">🎧</headphone> <br></br>sharing app</span>
         
       </h1>
       <img

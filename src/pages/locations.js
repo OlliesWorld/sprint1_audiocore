@@ -26,7 +26,7 @@ const pageStyles = {
 const locationsPage = ({data}) => {
     return(
         <>
-        <Nav />
+      <Nav />
         <main style={pageStyles}>
             <h1>Locations:</h1>
             <ul>
@@ -39,7 +39,7 @@ const locationsPage = ({data}) => {
                 })}
             </ul>
         </main>
-        </>
+       </>
     )
 }
 

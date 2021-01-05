@@ -3,8 +3,9 @@ module.exports = {
   siteMetadata: {
     title: "AudioCORE",
     siteUrl: "https://sprint1_audiocoremain.gtsb.io/",
-    siteRepo: "https://github.com/OlliesWorld/sprint1_audiocore",
+    description: "The world's best (and only) headphone sharing app",
   },
+  flags : { DEV_SSR: true },
   plugins: [
     {
       resolve: "gatsby-source-contentful",
