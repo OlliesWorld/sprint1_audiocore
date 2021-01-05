@@ -10,26 +10,24 @@ const navStyles = {
   padding: '5px 0px',
   display: 'flex',
 }
-// const titleStyles = {
-//   fontSize: 65,
-//   color: '#f3df4d',
-//   paddingLeft: 15,
-//   margin: 0,
-// }
+const titleStyles = {
+  fontSize: 65,
+  color: '#f3df4d',
+  paddingLeft: 45,
+  margin: 0,
+}
 
 const listStyles = {
   marginBottom: 5,
   marginTop: 10,
-  paddingLeft: 400,
+  paddingLeft: 450,
   display: 'flex',
-  textDecoratin: 'none',
 }
 
 const linkStyles = {
   color: '#f3df4d',
   fontWeight: "bold",
-  listStyleType: 'none',
-  
+  textTransform: 'Uppercase',
   paddingLeft: 40,
   fontSize: 30,
 }
@@ -43,15 +41,15 @@ const headStyles = {
 const NavBar = () => {
   return (
   <nav style={navStyles}>
-     
-      <ul style={listStyles}>
-      <img src={Headphones} alt="" style={headStyles} />
-          <li><Link style={linkStyles}  to='/'>Home</Link></li>
-          <li><Link style={linkStyles} to='/about'>About</Link></li>
-          <li><Link style={linkStyles} to='/locations'>Locations </Link></li>
+     <h1 style={titleStyles}>AudioCORE</h1>
+      <div style={listStyles}>
+        <img src={Headphones} alt="" style={headStyles} />
+        <h2><Link style={linkStyles}  to='/'>Home</Link></h2>
+        <h2><Link style={linkStyles} to='/about'>About</Link></h2>
+        <h2><Link style={linkStyles} to='/locations'>Locations </Link></h2>
         
-      <img src={Headphones} alt="" style={headStyles} />
-      </ul>
+        <img src={Headphones} alt="" style={headStyles} />
+      </div>
   </nav>
   )
 
