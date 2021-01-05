@@ -40,7 +40,7 @@ const IndexPage = () => {
         <br />
         <span style={headingAccentStyles}>— you found the world's leading (and only)
         <br></br> 
-        <span role="img" aria-label="Headphone emojis">🎧</span> HEADPHONE <headphone role="img" aria-label="Headphone emojis">🎧</headphone> <br></br>sharing app</span>
+        <span role="img" aria-label="Headphone emojis">🎧</span> HEADPHONE <span role="img" aria-label="Headphone emojis">🎧</span> <br></br>sharing app</span>
         
       </h1>
       <img

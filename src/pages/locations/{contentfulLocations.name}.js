@@ -24,7 +24,7 @@ const pageStyles = {
             <h1 style={cityStyles}>{name}</h1>
             
         
-          <p>It's a place, and we're there!{name}</p>
+          <p>{name} is the spot for Headphones!</p> 
           </main>
    </>
   );
@@ -32,11 +32,13 @@ const pageStyles = {
 
 export const query = graphql `
   query($id: String!) {
-    contentfulLocations(id: { eq: $id }) {
-              name
-              slug
-      }
-  }
+    contentfulLocations(id: { eq: $id })
+       {
+          name
+          slug
+          id
+       }
+}
 `
 
 
