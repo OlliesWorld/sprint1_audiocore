@@ -1,8 +1,8 @@
 import * as React from "react"
 import Nav from '../components/nav'
+import {graphql} from 'gatsby'
 
 
-// styles
 const pageStyles = {
   backgroundColor: '#f3df4d',
   color: "#232129",
@@ -21,10 +21,6 @@ const headingAccentStyles = {
 }
 
 
-
-
-
-// markup
 const IndexPage = () => {
   return (
     <>

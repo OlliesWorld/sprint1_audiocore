@@ -9,6 +9,7 @@ const navStyles = {
   margin: '0',
   padding: '5px 0px',
   display: 'flex',
+  
 }
 const titleStyles = {
   fontSize: 65,
@@ -20,8 +21,10 @@ const titleStyles = {
 const listStyles = {
   marginBottom: 5,
   marginTop: 10,
-  paddingLeft: 450,
+  paddingLeft: 150,
   display: 'flex',
+  
+  
 }
 
 const linkStyles = {

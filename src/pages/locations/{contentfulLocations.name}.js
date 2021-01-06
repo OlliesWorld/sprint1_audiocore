@@ -38,7 +38,7 @@ export const query = graphql `
           slug
           id
        }
-}
+  }
 `
 
 
