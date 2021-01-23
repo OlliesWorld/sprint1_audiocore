@@ -1,31 +1,24 @@
 import React from 'react'
-import Nav from '../../components/nav'
+import  { Box, Text} from "@chakra-ui/react"
 import {graphql} from 'gatsby'
+import NavBar from '../../components/navBar'
 
-const pageStyles = {
-    backgroundColor: '#f3df4d',
-    width: '80%',
-    margin: '50px auto',
-    padding: '15px 35px',
-  }
-
- const cityStyles = {
-   color: '#000'
- }
 
  export default function Component(props) {
    const {name} = props.data.contentfulLocations
+   const {description} = props.data.contentfulLocationsDescriptionTextNode
   return (
    
       <>
-      <Nav />
-          <main style={pageStyles}>
-          
-            <h1 style={cityStyles}>{name}</h1>
-            
-        
-          <p>{name} is the spot for Headphones!</p> 
-          </main>
+      <NavBar />
+         
+      <Box p={8} bg='#f3df4d' mx={50}>
+      
+      <Text fontSize="3xl" color="Purple">{name}</
+      Text>
+ 
+          <p>{description}</p>
+          </Box>
    </>
   );
 };
@@ -38,6 +31,9 @@ export const query = graphql `
           slug
           id
        }
+       contentfulLocationsDescriptionTextNode {
+    description
+  }
   }
 `
 

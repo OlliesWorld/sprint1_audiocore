@@ -1,40 +1,24 @@
-import * as React from 'react'
-import Nav from '../components/nav'
+import React from 'react'
+
 import {graphql} from 'gatsby'
+import NavBar from '../components/navBar'
+import  { Box, Text} from "@chakra-ui/react"
 
-
-const containerStyles = {
-    backgroundColor: '#f3df4d',
-    width: '80%',
-    margin: '50px auto',
-    padding: '15px 35px',
-  }
-
-  const textStyles = {
-   color: '#96999b',
-   fontSize: '2rem'
-  }
-
-
-  const AboutPage = ({
-    data: {
-        contentfulAbout: {
-            title
-        }
-    }
-}) => {
+  export default function Component(props) {
+    const {title} = props.data.contentfulAbout
+    const {description} = props.data.contentfulAboutDescriptionTextNode
     return (
             <>
-            <Nav />
-            <div style={containerStyles}>
-        
-            <h1 style={textStyles}>{title}</h1>
-     
-            </div>
+            <NavBar />
+            <Box p={8} bg='#f3df4d' mx={50}>
+      
+      <Text fontSize="3xl" color="Purple">{title}</Text>
+            <p>{description}</p>
+            </Box>
             </>
     )
 }
-export default AboutPage
+
 export const query = graphql`
   query {
     contentfulAbout(title: { eq: "About" }) {
@@ -42,6 +26,9 @@ export const query = graphql`
           slug
           
        }
+       contentfulAboutDescriptionTextNode {
+    description
+  }
        
     }
 `

@@ -1,43 +1,32 @@
-import * as React from 'react'
-import Nav from '../components/nav'
-import {Link, graphql} from 'gatsby'
+import React from 'react'
 
-const pageStyles = {
-    backgroundColor: '#fff',
-    width: '80%',
-    margin: '50px auto',
-    padding: '15px 35px',
-  }
+import {graphql} from 'gatsby'
+import NavBar from '../components/navBar'
+import  { Box, Link, Text } from "@chakra-ui/react"
 
-  const linkStyles = {
-    display: 'inline-block',
-    textTransform: 'uppercase',
-    listStyleType: 'none',
-  }
-
-  const locationStyles = {
-    color: '#f3df4d',
-    textDecorationColor: '#96999b',
-    fontSize: 40,
-    padding: 40,
-
-  }
 
 const locationsPage = ({data}) => {
     return(
         <>
-      <Nav />
-        <main style={pageStyles}>
-            <h1>Locations:</h1>
+      <NavBar />
+        <main >
+        <Box p={8} bg='#f3df4d' mx={50}>
+      
+            <Text fontSize="3xl" color="Purple">Locations:</Text>
             <ul>
                 {data.allContentfulLocations.nodes.map((location) => {
                     return (
-                        <li style={linkStyles} id={location.id}>
-                            <Link style={locationStyles} to={`/locations/${location.slug}`}>{location.name}</Link>
-                        </li>
+                        <Box p={4} display={{ md: "flex" }}>
+                            
+                        
+                                <Link key={location.id} href={`/locations/${location.slug}`}fontSize={{ base: "20px", md: "48px", lg: "60px" }}  bg="Purple" p={5} mx={50}>{location.name}</Link>
+                        
+                           
+                        </Box>
                     )
                 })}
             </ul>
+            </Box>
         </main>
        </>
     )
