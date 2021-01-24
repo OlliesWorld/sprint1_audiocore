@@ -17,7 +17,7 @@ export default function FeedbackForm({ data }) {
         onSubmit={async (values) => {
         // Send form values to Formium
         await formium.submitForm('sprint2gatsby', values);
-        navigate('/thanks');}} />
+        navigate('/thanks');}} color='purple'/>
         </Box>
         </Box>
         </>
