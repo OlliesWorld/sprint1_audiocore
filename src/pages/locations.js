@@ -19,7 +19,7 @@ const locationsPage = ({data}) => {
                         <Box p={4} display={{ md: "flex" }}>
                             
                         
-                                <Link key={location.id} href={`/locations/${location.slug}`}fontSize={{ base: "20px", md: "48px", lg: "60px" }}  bg="Purple" p={5} mx={50}>{location.name}</Link>
+                                <Link key={location.id} href={`/locations/${location.slug}`}fontSize={{ base: "20px", md: "48px", lg: "60px" }}  bg="Purple" p={5} mx={50}> {location.name}</Link>
                         
                            
                         </Box>

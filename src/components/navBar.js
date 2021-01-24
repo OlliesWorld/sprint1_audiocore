@@ -15,9 +15,11 @@ function NavBar() {
     <Spacer />
         <Link href='/' fontSize={{ base: "32px", md: "48px", lg: "60px" }} fontWeight="bold" color="Purple" >AudioCORE</Link>
         <Spacer />
-        <Link  href='/about' fontSize={{ base: "24px", md: "40px", lg: "56px" }} color="Purple">About</Link>
+        <Link  href='/about' fontSize={{ base: "18px", md: "28px", lg: "38px" }} color="Purple">About</Link>
         <Spacer />
-        <Link href='/locations' fontSize={{ base: "24px", md: "40px", lg: "56px" }} color="Purple">Locations </Link>
+        <Link href='/locations' fontSize={{ base: "18px", md: "28px", lg: "38px" }} color="Purple">Locations</Link>
+        <Spacer />
+        <Link href='/Contact' fontSize={{ base: "18px", md: "28px", lg: "38px" }} color="Purple">Contact Us</Link>
         <Spacer />
         <Box flexShrink={0}>
           <Image
