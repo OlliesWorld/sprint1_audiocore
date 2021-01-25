@@ -20,6 +20,7 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
     "@chakra-ui/gatsby-plugin",
+    "gatsby-plugin-netlify",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -34,6 +35,6 @@ module.exports = {
         projectId: process.env.GATSBY_FORMIUM_PROJECTID,
         accessToken: process.env.FORMIUM_TOKEN,
       },
-    },
+    },  
   ],
 };

@@ -11,7 +11,7 @@ const locationsPage = ({data}) => {
       <NavBar />
         <main >
         <Box p={8} bg='#f3df4d' mx={50}>
-      
+     
             <Text fontSize="3xl" color="Purple">Locations:</Text>
             <ul>
                 {data.allContentfulLocations.nodes.map((location) => {
@@ -19,13 +19,14 @@ const locationsPage = ({data}) => {
                         <Box p={4} display={{ md: "flex" }}>
                             
                         
-                                <Link key={location.id} href={`/locations/${location.slug}`}fontSize={{ base: "20px", md: "48px", lg: "60px" }}  bg="Purple" p={5} mx={50}> {location.name}</Link>
+                                <Link key={location.id} href={`/locations/${location.slug}`}fontSize={{ base: "20px", md: "48px", lg: "60px" }}  bg="Purple" p={5} mx={50} borderRadius={{base: "0.25rem"}} boxShadow="dark-lg"  > {location.name}</Link>
                         
                            
                         </Box>
                     )
                 })}
             </ul>
+            
             </Box>
         </main>
        </>
